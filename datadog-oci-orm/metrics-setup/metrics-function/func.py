@@ -276,136 +276,136 @@ def handler(ctx: context.InvokeContext, data: io.BytesIO = None) -> response.Res
         headers={"Content-Type": "application/json"},
     )
 
-# Example OCI metric message
-ctx = context.InvokeContext
-oci_metrics_messages = [
-    {
-        "namespace": "oci_vcn",
-        "resourceGroup": None,
-        "compartmentId": "ocid1.compartment.oc1...",
-        "name": "VnicFromNetworkBytes",
-        "dimensions": {
-            "resourceId": "ocid1.vnic.oc1.phx..."
-        },
-        "metadata": {
-            "displayName": "Bytes from Network",
-            "unit": "bytes"
-        },
-        "datapoints": [
-            {
-                "timestamp": 1652196912000,
-                "value": 5780.0,
-                "count": 1
-            }
-        ]
-    }, 
-    {
-        "namespace": "oci_faas",
-        "resourceGroup": None,
-        "compartmentId": "ocid1.compartment.oc1...",
-        "name": "FunctionInvocationCount",
-        "dimensions": {
-            "resourceId": "ocid1.vnic.oc1.phx..."
-        },
-        "metadata": {
-            "displayName": "Function Invocation Count",
-            "unit": "decimal"
-        },
-        "datapoints": [
-            {
-                "timestamp": 1652196912000,
-                "value": 100,
-                "count": 1
-            }
-        ]
-    }
-]
+# # Example OCI metric message
+# ctx = context.InvokeContext
+# oci_metrics_messages = [
+#     {
+#         "namespace": "oci_vcn",
+#         "resourceGroup": None,
+#         "compartmentId": "ocid1.compartment.oc1...",
+#         "name": "VnicFromNetworkBytes",
+#         "dimensions": {
+#             "resourceId": "ocid1.vnic.oc1.phx..."
+#         },
+#         "metadata": {
+#             "displayName": "Bytes from Network",
+#             "unit": "bytes"
+#         },
+#         "datapoints": [
+#             {
+#                 "timestamp": 1652196912000,
+#                 "value": 5780.0,
+#                 "count": 1
+#             }
+#         ]
+#     }, 
+#     {
+#         "namespace": "oci_faas",
+#         "resourceGroup": None,
+#         "compartmentId": "ocid1.compartment.oc1...",
+#         "name": "FunctionInvocationCount",
+#         "dimensions": {
+#             "resourceId": "ocid1.vnic.oc1.phx..."
+#         },
+#         "metadata": {
+#             "displayName": "Function Invocation Count",
+#             "unit": "decimal"
+#         },
+#         "datapoints": [
+#             {
+#                 "timestamp": 1652196912000,
+#                 "value": 100,
+#                 "count": 1
+#             }
+#         ]
+#     }
+# ]
 
-metrics_messages = _generate_metrics_msg(ctx, oci_metrics_messages)
-try:
-    response = _send_metrics_msg_to_datadog(metrics_messages)
-    print(f"Response: {response}")
-except HTTPError as e:
-    print(f"HTTP error occurred: {e.response.text}")
-except Exception as e:
-    print(f"Unexpected error: {str(e)}")
+# metrics_messages = _generate_metrics_msg(ctx, oci_metrics_messages)
+# try:
+#     response = _send_metrics_msg_to_datadog(metrics_messages)
+#     print(f"Response: {response}")
+# except HTTPError as e:
+#     print(f"HTTP error occurred: {e.response.text}")
+# except Exception as e:
+#     print(f"Unexpected error: {str(e)}")
 
-# Example OTLP metric message
+# # Example OTLP metric message
 
-current_utc_time = datetime.now(timezone.utc)
-unix_timestamp_nano = int(current_utc_time.timestamp() * 1_000_000_000)
-unix_timestamp_nano_str = str(unix_timestamp_nano)
-otlp_metrics_message = {
-  "resourceMetrics": [
-    {
-      "resource": {
-        "attributes": [
-          {
-            "key": "service.name",
-            "value": {
-              "stringValue": "my.service"
-            }
-          },
-          {
-            "key": "service.instance.id",
-            "value": {
-              "stringValue": "test-instance-id"
-            }
-          }
-        ]
-      },
-      "scopeMetrics": [
-        {
-          "scope": {
-            "name": "my.library",
-            "version": "1.0.0",
-            "attributes": [
-              {
-                "key": "my.scope.attribute",
-                "value": {
-                  "stringValue": "some scope attribute"
-                }
-              }
-            ]
-          },
-          "metrics": [
-            {
-              "name": "my.counter",
-              "unit": "1",
-              "description": "I am a Counter",
-              "sum": {
-                "aggregationTemporality": 1,
-                "isMonotonic": True,
-                "dataPoints": [
-                  {
-                    "asDouble": 5,
-                    "startTimeUnixNano": unix_timestamp_nano_str,
-                    "timeUnixNano": unix_timestamp_nano_str,
-                    "attributes": [
-                      {
-                        "key": "my.counter.attr",
-                        "value": {
-                          "stringValue": "some value"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+# current_utc_time = datetime.now(timezone.utc)
+# unix_timestamp_nano = int(current_utc_time.timestamp() * 1_000_000_000)
+# unix_timestamp_nano_str = str(unix_timestamp_nano)
+# otlp_metrics_message = {
+#   "resourceMetrics": [
+#     {
+#       "resource": {
+#         "attributes": [
+#           {
+#             "key": "service.name",
+#             "value": {
+#               "stringValue": "my.service"
+#             }
+#           },
+#           {
+#             "key": "service.instance.id",
+#             "value": {
+#               "stringValue": "test-instance-id"
+#             }
+#           }
+#         ]
+#       },
+#       "scopeMetrics": [
+#         {
+#           "scope": {
+#             "name": "my.library",
+#             "version": "1.0.0",
+#             "attributes": [
+#               {
+#                 "key": "my.scope.attribute",
+#                 "value": {
+#                   "stringValue": "some scope attribute"
+#                 }
+#               }
+#             ]
+#           },
+#           "metrics": [
+#             {
+#               "name": "my.counter",
+#               "unit": "1",
+#               "description": "I am a Counter",
+#               "sum": {
+#                 "aggregationTemporality": 1,
+#                 "isMonotonic": True,
+#                 "dataPoints": [
+#                   {
+#                     "asDouble": 5,
+#                     "startTimeUnixNano": unix_timestamp_nano_str,
+#                     "timeUnixNano": unix_timestamp_nano_str,
+#                     "attributes": [
+#                       {
+#                         "key": "my.counter.attr",
+#                         "value": {
+#                           "stringValue": "some value"
+#                         }
+#                       }
+#                     ]
+#                   }
+#                 ]
+#               }
+#             }
+#           ]
+#         }
+#       ]
+#     }
+#   ]
+# }
 
-otlp_metrics_message = json.dumps(otlp_metrics_message).replace('True', 'true').replace('False', 'false')
+# otlp_metrics_message = json.dumps(otlp_metrics_message).replace('True', 'true').replace('False', 'false')
 
-try:
-    response = _send_metrics_msg_to_datadog(otlp_metrics_message)
-    print(f"Response: {response}")
-except HTTPError as e:
-    print(f"HTTP error occurred: {e.response.text}")
-except Exception as e:
-    print(f"Unexpected error: {str(e)}")
+# try:
+#     response = _send_metrics_msg_to_datadog(otlp_metrics_message)
+#     print(f"Response: {response}")
+# except HTTPError as e:
+#     print(f"HTTP error occurred: {e.response.text}")
+# except Exception as e:
+#     print(f"Unexpected error: {str(e)}")
