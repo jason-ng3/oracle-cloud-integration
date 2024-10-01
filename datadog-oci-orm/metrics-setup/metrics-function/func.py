@@ -66,7 +66,7 @@ def _generate_metrics_msg(
     # Get metrics
     metrics_list = json.loads(serialized_metric_data)
     logger.info(f"Metrics list: {metrics_list}")
-    converted_event_list = handle_metric_events(event_list=serialized_metric_data)
+    converted_event_list = handle_metric_events(event_list=metrics_list)
     logger.info(f"Converted metrics list: {converted_event_list}")
 
     result = {
