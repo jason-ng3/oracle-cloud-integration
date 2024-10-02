@@ -108,7 +108,6 @@ def handle_metric_events(event_list):
     for event in event_list:
         single_result = transform_metric_to_otlp_format(log_record=event)
         result_list.append(single_result)
-        logging.getLogger().debug(single_result)
 
     return result_list
 
