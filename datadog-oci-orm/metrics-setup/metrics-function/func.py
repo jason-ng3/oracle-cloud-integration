@@ -65,9 +65,7 @@ def _generate_metrics_msg(
     service_name = "oci"
     # Get metrics
     metrics_list = json.loads(serialized_metric_data)
-    logger.info(f"Metrics list: {metrics_list}")
     converted_event_list = handle_metric_events(event_list=metrics_list)
-    logger.info(f"Converted metrics list: {converted_event_list}")
 
     result = {
         "resourceMetrics": [
@@ -98,7 +96,6 @@ def _generate_metrics_msg(
     }
 
     # OTLP format must be in lowercase
-    logger.info(f"Final result: {result}")
     return json.dumps(result).replace('True', 'true').replace('False', 'false')
 
 def handle_metric_events(event_list):
