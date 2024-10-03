@@ -117,9 +117,7 @@ def transform_metric_to_otlp_format(log_record: dict):
                 "isMonotonic": True
             }
         
-        result[metric_type] = {
-            "dataPoints": metric_points
-        }
+        result[metric_type]["dataPoints"] = metric_points
     
     return result
 
