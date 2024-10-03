@@ -31,5 +31,5 @@ resource "oci_functions_function" "metrics_function" {
   defined_tags  = {}
   freeform_tags = local.freeform_tags
   image         = local.user_image_provided ? local.custom_image_path : local.docker_image_path
-  image_digest = "sha256:14943b43dd8166fbedfc28478f193be8b97b649ec90208aed9b0ce0999f21c75"s
+  image_digest = "sha256:14943b43dd8166fbedfc28478f193be8b97b649ec90208aed9b0ce0999f21c75"
 }
