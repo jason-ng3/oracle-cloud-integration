@@ -117,7 +117,7 @@ def transform_metric_to_otlp_format(log_record: dict):
                 "isMonotonic": True,
                 "dataPoints": metric_points
             }
-        elif: metric_type == "sum":
+        elif metric_type == "sum":
             result[metric_type] = {
                 "aggregationTemporality": 2,
                 "isMonotonic": True,
