@@ -1,0 +1,54 @@
+[
+    {
+        "namespace": "oci_blockstore",
+        "resourceGroup": null,
+        "compartmentId": "ocid1.tenancy.oc1..aaaaaaaa5fgckjowazrzbrkmrwlykvyil3d7ea7jtaywmh7khm25o6ienzha",
+        "name": "VolumeWriteThroughput",
+        "dimensions": {
+            "resourceId": "ocid1.bootvolume.oc1.iad.abuwcljt72emkioqzr2tn5mo6u7y2xktbqnkrc6vor3ilwqwaasvk6kxk5sa",
+            "attachmentId": "ocid1.instance.oc1.iad.anuwcljt3bbddlqc7jaje4a6ylzvkf4r3qo66q3cngdqgwxcalrfq735qhnq"
+        },
+        "metadata": {
+            "displayName": "Write Throughput",
+            "unit": "bytes"
+        },
+        "datapoints": [
+            {
+                "timestamp": 1727913117088,
+                "value": 33792.0,
+                "count": 1
+            },
+            {
+                "timestamp": 1727913147088,
+                "value": 288768.0,
+                "count": 1
+            }
+        ]
+    },
+    {
+        "namespace": "oci_blockstore",
+        "resourceGroup": null,
+        "compartmentId": "ocid1.tenancy.oc1..aaaaaaaa5fgckjowazrzbrkmrwlykvyil3d7ea7jtaywmh7khm25o6ienzha",
+        "name": "VolumeThrottledIOs",
+        "dimensions": {
+            "resourceId": "ocid1.bootvolume.oc1.iad.abuwcljt72emkioqzr2tn5mo6u7y2xktbqnkrc6vor3ilwqwaasvk6kxk5sa",
+            "attachmentId": "ocid1.instance.oc1.iad.anuwcljt3bbddlqc7jaje4a6ylzvkf4r3qo66q3cngdqgwxcalrfq735qhnq"
+        },
+        "metadata": {
+            "displayName": "Throttled IOs",
+            "unit": "operations"
+        },
+        "datapoints": [
+            {
+                "timestamp": 1727913117088,
+                "value": 5054.0,
+                "count": 1
+            },
+            {
+                "timestamp": 1727913147088,
+                "value": 4878.0,
+                "count": 1
+            }
+        ]
+    }
+]

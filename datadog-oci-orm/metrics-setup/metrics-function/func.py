@@ -25,30 +25,6 @@ _session.mount("https://", HTTPAdapter(pool_connections=_max_pool))
 def _get_serialized_metric_data(raw_metrics: io.BytesIO) -> str:
     return raw_metrics.getvalue().decode("utf-8")
 
-"""
-Each metric has the form of:
-
-{
-    "namespace": "<Example Namespace>",
-    "resourceGroup": "<Example Resource Group>",
-    "compartmentId": "<Example Compartment ID>",
-    "name": "<Example Metric Name>",
-    "dimensions": {
-        "<Example Dimension Key>": "<Example Dimension Value>",
-    },
-    "metadata": {
-        "<Example Metadata Key>": "<Example Metadata Value>",
-    },
-    "datapoints": [
-        {
-            "timestamp": "<Example Timestamp in ms since Unix Epoch>",
-            "value": "<Example Value>",
-            "count": "<Example count>",
-        },
-    ]
-}
-"""
-
 def _generate_metrics_msg(
     ctx: context.InvokeContext,
     serialized_metric_data: str,
@@ -120,17 +96,30 @@ def transform_metric_to_otlp_format(log_record: dict):
     """
     # Get metric name
     metric_name = get_metric_name(log_record)
-    # Get metric value
+
+    # Get metric values
     metric_points = get_metric_points(log_record)
+
+    # Get metric type
+    with open('metrics_mapping.json', 'r') as f:
+        metrics_mapping = json.load(f)
     
-   
     result = {
-        "name": get_metric_name(log_record),
-        "unit": "1",
-        "gauge": {
-            "dataPoints": get_metric_points(log_record)
-        }
+        "name": metric_name
     }
+
+    if metric_name in metrics_mapping:
+        metric_type = metrics_mapping[metric_name]
+
+        if metric_type == "sum":
+            result[metric_type] = {
+                "aggregationTemporality": 1,
+                "isMonotonic": true
+            }
+        
+        result[metric_type] = {
+            "dataPoints": metric_points
+        }
     
     return result
 

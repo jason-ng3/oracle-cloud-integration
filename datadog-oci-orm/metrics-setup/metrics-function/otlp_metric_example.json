@@ -1,0 +1,60 @@
+{
+    "resourceMetrics": [
+        {
+            "resource": {
+                "attributes": [
+                    {
+                        "key": "service.name",
+                        "value": {
+                            "stringValue": "oci"
+                        }
+                    },
+                    {
+                        "key": "service.instance.id",
+                        "value": {
+                            "stringValue": "ocid1.tenancy.oc1..aaaaaaaa5fgckjowazrzbrkmrwlykvyil3d7ea7jtaywmh7khm25o6ienzha"
+                        }
+                    }
+                ]
+            },
+            "scopeMetrics": [
+                {
+                    "metrics": [
+                        {
+                            "name": "oci.blockstore.volume.write.throughput",
+                            "gauge": {
+                                "dataPoints": [
+                                    {
+                                        "asDouble": 33792,
+                                        "timeUnixNano": "1727913117088000000"
+                                    },
+                                    {
+                                        "asDouble": 288768,
+                                        "timeUnixNano": "1727913147088000000"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "oci.blockstore.volume.throttled.i.os",
+                            "sum": {
+                                "aggregationTemporality": 1,
+                                "isMonotonic": true,
+                                "dataPoints": [
+                                    {
+                                        "asDouble": 5054,
+                                        "timeUnixNano": "1727913117088000000"
+                                    },
+                                    {
+                                        "asDouble": 4878,
+                                        "timeUnixNano": "1727913147088000000"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
