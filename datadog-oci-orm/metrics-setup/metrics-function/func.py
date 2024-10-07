@@ -109,18 +109,13 @@ def transform_metric_to_otlp_format(log_record: dict):
     }
 
     if metric_name in metrics_mapping:
-        metric_type = metrics_mapping[metric_name]
+        metric_type = metrics_mapping[metric_name]["metric_type"]
+        aggregationTemporality = metrics_mapping[metric_name]["aggregationTemporality"]
 
-        if metric_name == "oci.computeagent.networks.bytes.out":
+        if metric_type == "sum":
             result[metric_type] = {
-                "aggregationTemporality": 1,
                 "isMonotonic": True,
-                "dataPoints": metric_points
-            }
-        elif metric_type == "sum":
-            result[metric_type] = {
-                "aggregationTemporality": 2,
-                "isMonotonic": True,
+                "aggregationTemporality": aggregationTemporality,
                 "dataPoints": metric_points
             }
         else:
