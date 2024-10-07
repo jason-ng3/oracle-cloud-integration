@@ -13,12 +13,12 @@ variable "region" {
 variable "dynamic_group_name" {
   type        = string
   description = "The name of the dynamic group for giving access to service connector"
-  default     = "datadog-metrics-dynamic-group"
+  default     = "chrono-metrics-dynamic-group"
 }
 
-variable "datadog_metrics_policy" {
+variable "chrono_metrics_policy" {
   type        = string
   description = "The name of the policy for metrics"
-  default     = "datadog-metrics-policy"
+  default     = "chrono-metrics-policy"
 }
 

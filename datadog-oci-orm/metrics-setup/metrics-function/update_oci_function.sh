@@ -12,10 +12,10 @@ echo "Logging into OCI container registry..."
 docker login iad.ocir.io
 
 echo "Build new image of OCI function..."
-docker build -t iad.ocir.io/idf9gv5rieyl/datadog-metrics-functions/datadog-function-metrics:latest . --no-cache
+docker build -t iad.ocir.io/idf9gv5rieyl/chrono-metrics-functions/chrono-function-metrics:latest . --no-cache
 
 echo "Pushing image to OCI container registry..."
-push_output=$(docker push iad.ocir.io/idf9gv5rieyl/datadog-metrics-functions/datadog-function-metrics:latest)
+push_output=$(docker push iad.ocir.io/idf9gv5rieyl/chrono-metrics-functions/chrono-function-metrics:latest)
 
 image_digest=$(echo "$push_output" | grep "digest: " | awk '{print $3}')
 echo "Image digest: $image_digest"

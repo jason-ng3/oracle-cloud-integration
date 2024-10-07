@@ -2,12 +2,10 @@ resource "oci_functions_application" "metrics_function_app" {
   depends_on     = [data.oci_core_subnet.input_subnet]
   compartment_id = var.compartment_ocid
   config = {
-    "DD_API_KEY"     = var.datadog_api_key
-    "DD_COMPRESS"    = "true"
-    "DD_INTAKE_HOST" = var.datadog_environment
-    "DD_INTAKE_LOGS" = "false"
-    "DD_MAX_POOL"    = "20"
-    "TENANCY_OCID"   = var.tenancy_ocid
+    "CHRONO_COMPRESS" = "true"
+    "OTEL_ENDPOINT"   = var.otel_collector_endpoint
+    "CHRONO_MAX_POOL" = "20"
+    "TENANCY_OCID"    = var.tenancy_ocid
   }
   defined_tags  = {}
   display_name  = "${var.resource_name_prefix}-function-app"
@@ -31,5 +29,5 @@ resource "oci_functions_function" "metrics_function" {
   defined_tags  = {}
   freeform_tags = local.freeform_tags
   image         = local.user_image_provided ? local.custom_image_path : local.docker_image_path
-  image_digest = "sha256:940787b191056fce2aa80ade8b0b44c7f0770a3dbc801656dd39ea7c039bfbcb"
+  image_digest  = "sha256:940787b191056fce2aa80ade8b0b44c7f0770a3dbc801656dd39ea7c039bfbcb"
 }

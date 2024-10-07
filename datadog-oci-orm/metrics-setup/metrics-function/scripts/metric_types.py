@@ -992,7 +992,8 @@ oci.network.firewall.teardrop.attacks.count
 Script below parses through above text to output a dictionary of metric names
 mapped to their metric types in a JSON file.
 """
-metrics_mapping = {}
+
+metric_types = {}
 metric_name_pattern = r"^oci\.[a-zA-Z0-9\.]+$"
 metric_type_pattern = r"\((gauge|count)\)"
 
@@ -1009,22 +1010,22 @@ for i, line in enumerate(lines):
             if match:
                 metric_type = match.group(1)
                 if metric_type == "count":
-                    metrics_mapping[metric_name] = {
+                    metric_types[metric_name] = {
                         "metric_type": "sum",
                         "aggregationTemporality": 1
                     }
 
-                    with open('delta_counters.json', 'r') as f:
+                    with open('../data/delta_counters.json', 'r') as f:
                         delta_counters = json.load(f)
 
                         for delta_counter in delta_counters:
-                            if delta_counter in metrics_mapping:
-                                metrics_mapping[delta_counter]["aggregationTemporality"] = 2
+                            if delta_counter in metric_types:
+                                metric_types[delta_counter]["aggregationTemporality"] = 2
                 else:
-                    metrics_mapping[metric_name] = {
+                    metric_types[metric_name] = {
                         "metric_type": "gauge"
                     }
 
-# Write metrics_mapping dictionary to metrics_mapping.json
-with open('metrics_mapping.json', 'w') as f:
-    json.dump(metrics_mapping, f, indent=4) 
+# Write metric_types dictionary to metric_types.json
+with open('../data/metric_types.json', 'w') as f:
+    json.dump(metric_types, f, indent=4) 

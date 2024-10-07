@@ -1,18 +1,13 @@
 variable "resource_name_prefix" {
   type        = string
   description = "The prefix for the name of all of the resources"
-  default     = "datadog-metrics"
+  default     = "chrono-metrics"
 }
 
 variable "create_vcn" {
   type        = bool
   default     = true
   description = "Optional variable to create virtual network for the setup. True by default"
-}
-
-variable "datadog_api_key" {
-  type        = string
-  description = "The API key for sending message to datadog endpoints"
 }
 
 variable "function_subnet_id" {
@@ -36,14 +31,9 @@ variable "function_app_shape" {
   }
 }
 
-variable "datadog_environment" {
+variable "otel_collector_endpoint" {
   type        = string
-  description = "The endpoint to hit for sending the metrics. Varies by different datacenter"
-  validation {
-    condition = contains(["ocimetrics-intake.datadoghq.com", "ocimetrics-intake.us5.datadoghq.com", "ocimetrics-intake.us3.datadoghq.com",
-    "ocimetrics-intake.datadoghq.eu", "ocimetrics-intake.ap1.datadoghq.com", "ocimetrics-intake.ddog-gov.com"], var.datadog_environment)
-    error_message = "Valid values for var: datadog_environment are (ocimetrics-intake.datadoghq.com, ocimetrics-intake.us5.datadoghq.com, ocimetrics-intake.us3.datadoghq.com, ocimetrics-intake.datadoghq.eu, ocimetrics-intake.ap1.datadoghq.com, ocimetrics-intake.ddog-gov.com)."
-  }
+  description = "OTel collector endpoint to hit for sending the metrics."
 }
 
 variable "oci_docker_username" {

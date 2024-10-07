@@ -19,7 +19,7 @@ provider "oci" {
 locals {
   tenancy_home_region = data.oci_identity_tenancy.tenancy_metadata.home_region_key
   freeform_tags = {
-    datadog-terraform = "true"
+    chrono-terraform = "true"
   }
 }
 
@@ -39,7 +39,7 @@ resource "oci_identity_policy" "metrics_policy" {
   depends_on     = [oci_identity_dynamic_group.serviceconnector_group]
   compartment_id = var.tenancy_ocid
   description    = "[DO NOT REMOVE] Policy to have any connector hub read from monitoring source and write to a target function"
-  name           = var.datadog_metrics_policy
+  name           = var.chrono_metrics_policy
   statements = ["Allow dynamic-group ${var.dynamic_group_name} to read metrics in tenancy",
     "Allow dynamic-group ${var.dynamic_group_name} to use fn-function in tenancy",
     "Allow dynamic-group ${var.dynamic_group_name} to use fn-invocation in tenancy"

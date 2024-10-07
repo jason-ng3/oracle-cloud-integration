@@ -1,7 +1,7 @@
 # Title shown in Application Information tab.
-title: Datadog Metrics infra
+title: OCI Integration infra
 # Sub Title shown in Application Information tab.
-description: Setting up infra for sending OCI metrics to Datadog 
+description: Setting up infra for sending OCI metrics to Chronosphere
 schemaVersion: 1.1.0
 version: 1.0
 locale: en
@@ -11,10 +11,9 @@ variableGroups:
       - ${tenancy_ocid}
       - ${region}
       - ${compartment_ocid}
-  - title: "Datadog Environment"
+  - title: "OTel Collector"
     variables:
-      - ${datadog_api_key}
-      - ${datadog_environment}
+      - ${otel_collector_endpoint}
   - title: "Network options"
     variables:
       - ${create_vcn}
@@ -34,7 +33,7 @@ variables:
     title: Resource prefix
     description: The prefix for the name of all of the resources.
     required: true
-    default: datadog-metrics
+    default: chrono-metrics
   create_vcn:
     title: Create VCN
     description: Optional variable to create virtual network for the setup. Otherwise, choose an existing subnet from VCN
@@ -58,27 +57,12 @@ variables:
       compartmentId: ${vcnCompartment}
       vcnId: ${existingVcn}
 
-# Datadog Environment
-  datadog_api_key:
-    title: Datadog API Key
+# OTel Collector
+  otel_collector_endpoint:
+    title: OTel Collector Endpoint
     type: string
-    description: The API key for sending message to datadog endpoints.
+    description: OTel collector endpoint to hit for sending the metrics.
     required: true
-    sensitive: true
-    password: true
-    confirmation: true
-  datadog_environment:
-    title: Datadog Environment Endpoint
-    type: enum
-    description: The endpoint to hit for sending the metrics. Varies by different datacenter.
-    required: true
-    enum:
-      - ocimetrics-intake.datadoghq.com
-      - ocimetrics-intake.us5.datadoghq.com 
-      - ocimetrics-intake.us3.datadoghq.com
-      - ocimetrics-intake.datadoghq.eu
-      - ocimetrics-intake.ap1.datadoghq.com
-      - ocimetrics-intake.ddog-gov.com
     allowMultiple: false
 
   # Function setup
@@ -114,4 +98,4 @@ variables:
     type: nonNegativeInteger
     description: The batch size (in Kb) in which to send payload to target.
     required: false
-    default: 5000
+    default: 1000
