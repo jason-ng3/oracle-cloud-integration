@@ -121,11 +121,11 @@ def transform_metric_to_otlp_format(log_record: dict):
         "name": metric_name
     }
 
-    if metric_name in metrics_mapping:
-        metric_type = metrics_mapping[metric_name]["metric_type"]
+    if metric_name in metric_types:
+        metric_type = metric_types[metric_name]["metric_type"]
         
         if metric_type == "sum":
-            aggregationTemporality = metrics_mapping[metric_name]["aggregationTemporality"]
+            aggregationTemporality = metric_types[metric_name]["aggregationTemporality"]
             result[metric_type] = {
                 "isMonotonic": True,
                 "aggregationTemporality": aggregationTemporality,
