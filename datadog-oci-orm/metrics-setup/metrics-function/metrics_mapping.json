@@ -1,336 +1,1166 @@
 {
-    "oci.autonomous.database.apply.lag": "gauge",
-    "oci.autonomous.database.block.changes": "gauge",
-    "oci.autonomous.database.cpu.time": "gauge",
-    "oci.autonomous.database.cpu.utilization": "gauge",
-    "oci.autonomous.database.current.logons": "sum",
-    "oci.autonomous.database.dbtime": "gauge",
-    "oci.autonomous.database.ecpus.allocated": "gauge",
-    "oci.autonomous.database.execute.count": "sum",
-    "oci.autonomous.database.iops": "gauge",
-    "oci.autonomous.database.iothroughput": "gauge",
-    "oci.autonomous.database.logical.blocks.read": "gauge",
-    "oci.autonomous.database.ocpus.allocated": "gauge",
-    "oci.autonomous.database.parse.count": "sum",
-    "oci.autonomous.database.parses.by.type": "sum",
-    "oci.autonomous.database.queued.statements": "sum",
-    "oci.autonomous.database.redo.size": "gauge",
-    "oci.autonomous.database.running.statements": "sum",
-    "oci.autonomous.database.sessions": "sum",
-    "oci.autonomous.database.storage.allocated": "gauge",
-    "oci.autonomous.database.storage.allocated.by.tablespace": "gauge",
-    "oci.autonomous.database.storage.used": "gauge",
-    "oci.autonomous.database.storage.used.by.tablespace": "gauge",
-    "oci.autonomous.database.storage.utilization": "gauge",
-    "oci.autonomous.database.storage.utilization.by.tablespace": "gauge",
-    "oci.autonomous.database.transaction.count": "sum",
-    "oci.autonomous.database.transactions.by.status": "sum",
-    "oci.autonomous.database.transport.lag": "gauge",
-    "oci.autonomous.database.user.calls": "sum",
-    "oci.autonomous.database.wait.time": "gauge",
-    "oci.database.block.changes": "gauge",
-    "oci.database.cpu.utilization": "gauge",
-    "oci.database.current.logons": "sum",
-    "oci.database.execute.count": "sum",
-    "oci.database.parse.count": "sum",
-    "oci.database.storage.allocated": "gauge",
-    "oci.database.storage.allocated.by.tablespace": "gauge",
-    "oci.database.storage.used": "gauge",
-    "oci.database.storage.used.by.tablespace": "gauge",
-    "oci.database.storage.utilization": "gauge",
-    "oci.database.storage.utilization.by.tablespace": "gauge",
-    "oci.database.transaction.count": "sum",
-    "oci.database.user.calls": "sum",
-    "oci.database.cluster.asmdiskgroup.utilization": "gauge",
-    "oci.database.cluster.cpu.utilization": "gauge",
-    "oci.database.cluster.filesystem.utilization": "gauge",
-    "oci.database.cluster.load.average": "gauge",
-    "oci.database.cluster.memory.utilization": "gauge",
-    "oci.database.cluster.node.status": "gauge",
-    "oci.database.cluster.ocpus.allocated": "gauge",
-    "oci.database.cluster.swap.utilization": "gauge",
-    "oci.blockstore.volume.guaranteed.iops": "gauge",
-    "oci.blockstore.volume.guaranteed.throughput": "gauge",
-    "oci.blockstore.volume.guaranteed.vpus.per.gb": "gauge",
-    "oci.blockstore.volume.read.ops": "sum",
-    "oci.blockstore.volume.read.throughput": "gauge",
-    "oci.blockstore.volume.replication.seconds.since.last.sync": "gauge",
-    "oci.blockstore.volume.replication.seconds.since.last.upload": "gauge",
-    "oci.blockstore.volume.throttled.ios": "sum",
-    "oci.blockstore.volume.write.ops": "sum",
-    "oci.blockstore.volume.write.throughput": "gauge",
-    "oci.gpu.infrastructure.health.gpu.ecc.double.bit.errors": "sum",
-    "oci.gpu.infrastructure.health.gpu.ecc.single.bit.errors": "sum",
-    "oci.gpu.infrastructure.health.gpu.memory.utilization": "gauge",
-    "oci.gpu.infrastructure.health.gpu.power.draw": "gauge",
-    "oci.gpu.infrastructure.health.gpu.temperature": "gauge",
-    "oci.gpu.infrastructure.health.gpu.utilization": "gauge",
-    "oci.computeagent.cpu.utilization": "gauge",
-    "oci.computeagent.disk.bytes.read": "sum",
-    "oci.computeagent.disk.bytes.written": "sum",
-    "oci.computeagent.disk.iops.read": "sum",
-    "oci.computeagent.disk.iops.written": "sum",
-    "oci.computeagent.load.average": "gauge",
-    "oci.computeagent.memory.allocation.stalls": "sum",
-    "oci.computeagent.memory.utilization": "gauge",
-    "oci.computeagent.networks.bytes.in": "sum",
-    "oci.computeagent.networks.bytes.out": "sum",
-    "oci.rdma.infrastructure.health.rdma.rx.bytes": "sum",
-    "oci.rdma.infrastructure.health.rdma.rx.packets": "sum",
-    "oci.rdma.infrastructure.health.rdma.tx.bytes": "sum",
-    "oci.rdma.infrastructure.health.rdma.tx.packets": "sum",
-    "oci.compute.infrastructure.health.health.status": "sum",
-    "oci.compute.infrastructure.health.instance.status": "gauge",
-    "oci.compute.infrastructure.health.maintenance.status": "gauge",
-    "oci.oracle.oci.database.allocated.storage.utilization.by.tablespace": "gauge",
-    "oci.oracle.oci.database.apply.lag": "gauge",
-    "oci.oracle.oci.database.apply.lag.data.refresh.elapsed.time": "gauge",
-    "oci.oracle.oci.database.avg.gc.cr.block.receive.time": "gauge",
-    "oci.oracle.oci.database.backup.duration": "gauge",
-    "oci.oracle.oci.database.backup.size": "gauge",
-    "oci.oracle.oci.database.block.changes": "gauge",
-    "oci.oracle.oci.database.blocking.sessions": "gauge",
-    "oci.oracle.oci.database.cputime": "gauge",
-    "oci.oracle.oci.database.cpu.utilization": "gauge",
-    "oci.oracle.oci.database.current.logons": "sum",
-    "oci.oracle.oci.database.dbtime": "gauge",
-    "oci.oracle.oci.database.estimated.failover.time": "gauge",
-    "oci.oracle.oci.database.execute.count": "sum",
-    "oci.oracle.oci.database.fraspace.limit": "gauge",
-    "oci.oracle.oci.database.frautilization": "gauge",
-    "oci.oracle.oci.database.gc.cr.blocks.received": "gauge",
-    "oci.oracle.oci.database.gc.current.blocks.received": "gauge",
-    "oci.oracle.oci.database.iops": "gauge",
-    "oci.oracle.oci.database.io.throughput": "gauge",
-    "oci.oracle.oci.database.interconnect.traffic": "gauge",
-    "oci.oracle.oci.database.invalid.objects": "gauge",
-    "oci.oracle.oci.database.logical.blocks.read": "gauge",
-    "oci.oracle.oci.database.max.tablespace.size": "gauge",
-    "oci.oracle.oci.database.memory.usage": "gauge",
-    "oci.oracle.oci.database.monitoring.status": "gauge",
-    "oci.oracle.oci.database.non.reclaimable.fra": "gauge",
-    "oci.oracle.oci.database.ocpus.allocated": "sum",
-    "oci.oracle.oci.database.parse.count": "sum",
-    "oci.oracle.oci.database.parses.by.type": "gauge",
-    "oci.oracle.oci.database.problematic.scheduled.dbmsjobs": "gauge",
-    "oci.oracle.oci.database.process.limit.utilization": "gauge",
-    "oci.oracle.oci.database.processes": "gauge",
-    "oci.oracle.oci.database.reclaimable.fra": "gauge",
-    "oci.oracle.oci.database.reclaimable.fraspace": "gauge",
-    "oci.oracle.oci.database.recovery.window": "gauge",
-    "oci.oracle.oci.database.redo.apply.rate": "gauge",
-    "oci.oracle.oci.database.redo.generation.rate": "gauge",
-    "oci.oracle.oci.database.redo.size": "gauge",
-    "oci.oracle.oci.database.session.limit.utilization": "gauge",
-    "oci.oracle.oci.database.sessions": "gauge",
-    "oci.oracle.oci.database.storage.allocated": "gauge",
-    "oci.oracle.oci.database.storage.allocated.by.tablespace": "gauge",
-    "oci.oracle.oci.database.storage.used": "gauge",
-    "oci.oracle.oci.database.storage.used.by.tablespace": "gauge",
-    "oci.oracle.oci.database.storage.utilization": "gauge",
-    "oci.oracle.oci.database.storage.utilization.by.tablespace": "gauge",
-    "oci.oracle.oci.database.transaction.count": "sum",
-    "oci.oracle.oci.database.transactions.by.status": "gauge",
-    "oci.oracle.oci.database.transport.lag": "gauge",
-    "oci.oracle.oci.database.transport.lag.data.refresh.elapsed.time": "gauge",
-    "oci.oracle.oci.database.unprotected.data.window": "gauge",
-    "oci.oracle.oci.database.unusable.indexes": "gauge",
-    "oci.oracle.oci.database.usable.fra": "gauge",
-    "oci.oracle.oci.database.used.fraspace": "gauge",
-    "oci.oracle.oci.database.user.calls": "sum",
-    "oci.oracle.oci.database.wait.time": "gauge",
-    "oci.oracle.oci.database.dbmgmt.job.executions.count": "sum",
-    "oci.fastconnect.bits.received": "sum",
-    "oci.fastconnect.bits.sent": "sum",
-    "oci.fastconnect.bytes.received": "sum",
-    "oci.fastconnect.bytes.sent": "sum",
-    "oci.fastconnect.connection.state": "gauge",
-    "oci.fastconnect.ipv.4bgp.session.state": "gauge",
-    "oci.fastconnect.ipv.6bgp.session.state": "gauge",
-    "oci.fastconnect.packets.discarded": "sum",
-    "oci.fastconnect.packets.error": "sum",
-    "oci.fastconnect.packets.received": "sum",
-    "oci.fastconnect.packets.sent": "sum",
-    "oci.filestorage.file.system.read.average.latency.by.size": "gauge",
-    "oci.filestorage.file.system.read.requests.by.size": "gauge",
-    "oci.filestorage.file.system.read.throughput": "sum",
-    "oci.filestorage.file.system.usage": "gauge",
-    "oci.filestorage.file.system.write.average.latency.by.size": "gauge",
-    "oci.filestorage.file.system.write.requests.by.size": "sum",
-    "oci.filestorage.file.system.write.throughput": "sum",
-    "oci.filestorage.kerberos.errors": "sum",
-    "oci.filestorage.ldap.connection.errors": "sum",
-    "oci.filestorage.ldap.request.average.latency": "gauge",
-    "oci.filestorage.ldap.request.errors": "sum",
-    "oci.filestorage.ldap.request.throughput": "sum",
-    "oci.filestorage.metadata.iops": "gauge",
-    "oci.filestorage.metadata.request.average.latency": "gauge",
-    "oci.filestorage.mount.target.connections": "sum",
-    "oci.filestorage.mount.target.health": "gauge",
-    "oci.filestorage.mount.target.read.throughput": "sum",
-    "oci.filestorage.mount.target.write.throughput": "sum",
-    "oci.filestorage.replication.egress.throughput": "sum",
-    "oci.filestorage.replication.recovery.point.age": "gauge",
-    "oci.filestorage.replication.throughput": "sum",
-    "oci.faas.allocated.provisioned.concurrency": "gauge",
-    "oci.faas.allocated.total.concurrency": "gauge",
-    "oci.faas.function.execution.duration": "sum",
-    "oci.faas.function.invocation.count": "sum",
-    "oci.faas.function.response.count": "sum",
-    "oci.lbaas.accepted.connections": "sum",
-    "oci.lbaas.accepted.sslhandshake": "sum",
-    "oci.lbaas.active.connections": "sum",
-    "oci.lbaas.active.sslconnections": "sum",
-    "oci.lbaas.backend.servers": "gauge",
-    "oci.lbaas.backend.timeouts": "sum",
-    "oci.lbaas.bytes.received": "sum",
-    "oci.lbaas.bytes.sent": "sum",
-    "oci.lbaas.closed.connections": "sum",
-    "oci.lbaas.failed.sslclient.cert.verify": "sum",
-    "oci.lbaas.failed.sslhandshake": "sum",
-    "oci.lbaas.handled.connections": "sum",
-    "oci.lbaas.http.requests": "sum",
-    "oci.lbaas.http.responses": "sum",
-    "oci.lbaas.http.responses.200": "sum",
-    "oci.lbaas.http.responses.2xx": "sum",
-    "oci.lbaas.http.responses.3xx": "sum",
-    "oci.lbaas.http.responses.4xx": "sum",
-    "oci.lbaas.http.responses.502": "sum",
-    "oci.lbaas.http.responses.504": "sum",
-    "oci.lbaas.http.responses.5xx": "sum",
-    "oci.lbaas.invalid.header.responses": "sum",
-    "oci.lbaas.keep.alive.connections": "sum",
-    "oci.lbaas.peak.bandwidth": "gauge",
-    "oci.lbaas.response.time.first.byte": "gauge",
-    "oci.lbaas.response.time.http.header": "gauge",
-    "oci.lbaas.unhealthy.backend.servers": "gauge",
-    "oci.mysql.database.active.connections": "gauge",
-    "oci.mysql.database.backup.failure": "gauge",
-    "oci.mysql.database.backup.size": "gauge",
-    "oci.mysql.database.backup.time": "gauge",
-    "oci.mysql.database.cpuutilization": "gauge",
-    "oci.mysql.database.channel.failure": "gauge",
-    "oci.mysql.database.channel.lag": "gauge",
-    "oci.mysql.database.current.connections": "gauge",
-    "oci.mysql.database.db.volume.read.bytes": "sum",
-    "oci.mysql.database.db.volume.read.operations": "sum",
-    "oci.mysql.database.db.volume.utilization": "gauge",
-    "oci.mysql.database.db.volume.write.bytes": "sum",
-    "oci.mysql.database.db.volume.write.operations": "sum",
-    "oci.mysql.database.heat.wave.data.load.progress": "gauge",
-    "oci.mysql.database.heat.wave.health": "gauge",
-    "oci.mysql.database.heat.wave.statements": "sum",
-    "oci.mysql.database.memory.allocated": "gauge",
-    "oci.mysql.database.memory.used": "gauge",
-    "oci.mysql.database.memory.utilization": "gauge",
-    "oci.mysql.database.network.receive.bytes": "sum",
-    "oci.mysql.database.network.transmit.bytes": "sum",
-    "oci.mysql.database.ocpus.allocated": "gauge",
-    "oci.mysql.database.ocpus.used": "gauge",
-    "oci.mysql.database.statement.latency": "gauge",
-    "oci.mysql.database.statements": "sum",
-    "oci.mysql.database.storage.allocated": "gauge",
-    "oci.mysql.database.storage.used": "gauge",
-    "oci.nat.gateway.bytes.from.natgw": "sum",
-    "oci.nat.gateway.bytes.to.natgw": "sum",
-    "oci.nat.gateway.connections.closed": "sum",
-    "oci.nat.gateway.connections.established": "sum",
-    "oci.nat.gateway.connections.timed.out": "sum",
-    "oci.nat.gateway.drops.to.natgw": "sum",
-    "oci.nat.gateway.packets.from.natgw": "sum",
-    "oci.nat.gateway.packets.to.natgw": "sum",
-    "oci.objectstorage.all.requests": "sum",
-    "oci.objectstorage.client.errors": "sum",
-    "oci.objectstorage.enabled.olm": "gauge",
-    "oci.objectstorage.first.byte.latency": "gauge",
-    "oci.objectstorage.object.count": "sum",
-    "oci.objectstorage.post.requests": "sum",
-    "oci.objectstorage.put.requests": "sum",
-    "oci.objectstorage.stored.bytes": "gauge",
-    "oci.objectstorage.total.request.latency": "gauge",
-    "oci.objectstorage.uncommitted.parts": "gauge",
-    "oci.oke.apiserver.request.count": "sum",
-    "oci.oke.apiserver.response.count": "sum",
-    "oci.oke.kubernetes.node.condition": "gauge",
-    "oci.oke.node.state": "gauge",
-    "oci.oke.unschedulable.pods": "gauge",
-    "oci.queue.consumer.lag": "gauge",
-    "oci.queue.messages.count": "sum",
-    "oci.queue.messages.in.queue.count": "gauge",
-    "oci.queue.queue.size": "gauge",
-    "oci.queue.request.success": "sum",
-    "oci.queue.requests.latency": "gauge",
-    "oci.queue.requests.throughput": "gauge",
-    "oci.service.connector.hub.bytes.read.from.source": "sum",
-    "oci.service.connector.hub.bytes.read.from.task": "sum",
-    "oci.service.connector.hub.bytes.written.to.target": "sum",
-    "oci.service.connector.hub.bytes.written.to.task": "sum",
-    "oci.service.connector.hub.data.freshness": "gauge",
-    "oci.service.connector.hub.errors.at.source": "sum",
-    "oci.service.connector.hub.errors.at.target": "sum",
-    "oci.service.connector.hub.errors.at.task": "sum",
-    "oci.service.connector.hub.latency.at.source": "gauge",
-    "oci.service.connector.hub.latency.at.target": "gauge",
-    "oci.service.connector.hub.latency.at.task": "gauge",
-    "oci.service.connector.hub.messages.read.from.source": "sum",
-    "oci.service.connector.hub.messages.read.from.task": "sum",
-    "oci.service.connector.hub.messages.written.to.target": "sum",
-    "oci.service.connector.hub.messages.written.to.task": "sum",
-    "oci.service.connector.hub.service.connector.hub.errors": "sum",
-    "oci.service.gateway.bytes.from.service": "sum",
-    "oci.service.gateway.bytes.to.service": "sum",
-    "oci.service.gateway.packets.from.service": "sum",
-    "oci.service.gateway.packets.to.service": "sum",
-    "oci.service.gateway.sgw.drops.from.service": "sum",
-    "oci.service.gateway.sgw.drops.to.service": "sum",
-    "oci.vcn.smartnic.buffer.drops.from.host": "sum",
-    "oci.vcn.smartnic.buffer.drops.from.network": "sum",
-    "oci.vcn.vnic.conntrack.is.full": "gauge",
-    "oci.vcn.vnic.conntrack.util.percent": "gauge",
-    "oci.vcn.vnic.egress.drops.conntrack.full": "sum",
-    "oci.vcn.vnic.egress.drops.security.list": "sum",
-    "oci.vcn.vnic.egress.drops.throttle": "sum",
-    "oci.vcn.vnic.from.network.bytes": "sum",
-    "oci.vcn.vnic.from.network.packets": "sum",
-    "oci.vcn.vnic.ingress.drops.conntrack.full": "sum",
-    "oci.vcn.vnic.ingress.drops.security.list": "sum",
-    "oci.vcn.vnic.ingress.drops.throttle": "sum",
-    "oci.vcn.vnic.to.network.bytes": "sum",
-    "oci.vcn.vnic.to.network.packets": "sum",
-    "oci.vpn.bytes.received": "sum",
-    "oci.vpn.bytes.sent": "sum",
-    "oci.vpn.packets.error": "sum",
-    "oci.vpn.packets.received": "sum",
-    "oci.vpn.packets.sent": "sum",
-    "oci.vpn.tunnel.state": "gauge",
-    "oci.waf.bandwidth": "gauge",
-    "oci.waf.number.of.requests": "sum",
-    "oci.waf.number.of.requests.detected": "sum",
-    "oci.waf.traffic": "gauge",
-    "oci.postgresql.buffer.cache.hit.ratio": "gauge",
-    "oci.postgresql.connections": "sum",
-    "oci.postgresql.cpu.utilization": "gauge",
-    "oci.postgresql.deadlocks": "sum",
-    "oci.postgresql.memory.utilization": "gauge",
-    "oci.postgresql.read.iops": "gauge",
-    "oci.postgresql.read.latency": "gauge",
-    "oci.postgresql.read.throughput": "gauge",
-    "oci.postgresql.used.storage": "gauge",
-    "oci.postgresql.write.iops": "gauge",
-    "oci.postgresql.write.latency": "gauge",
-    "oci.postgresql.write.throughput": "gauge",
-    "oci.network.firewall.byte.received.count": "sum",
-    "oci.network.firewall.byte.sent.count": "sum",
-    "oci.network.firewall.decryption.rule.hit.count": "sum",
-    "oci.network.firewall.icmp.fragment.attacks.count": "sum",
-    "oci.network.firewall.ip.spoof.count": "sum",
-    "oci.network.firewall.land.attacks.count": "sum",
-    "oci.network.firewall.mac.spoof.count": "sum",
-    "oci.network.firewall.packet.drop.count": "sum",
-    "oci.network.firewall.packet.received.count": "sum",
-    "oci.network.firewall.packet.received.in.error.count": "sum",
-    "oci.network.firewall.packet.sent.count": "sum",
-    "oci.network.firewall.ping.of.death.attacks.count": "sum",
-    "oci.network.firewall.security.rule.hit.count": "sum",
-    "oci.network.firewall.teardrop.attacks.count": "sum"
+    "oci.autonomous.database.apply.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.block.changes": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.cpu.time": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.current.logons": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.dbtime": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.ecpus.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.execute.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.iothroughput": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.logical.blocks.read": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.ocpus.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.parse.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.parses.by.type": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.queued.statements": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.redo.size": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.running.statements": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.sessions": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.storage.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.storage.allocated.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.storage.used": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.storage.used.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.storage.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.storage.utilization.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.transaction.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.transactions.by.status": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.transport.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.autonomous.database.user.calls": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.autonomous.database.wait.time": {
+        "metric_type": "gauge"
+    },
+    "oci.database.block.changes": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.current.logons": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.database.execute.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.database.parse.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.database.storage.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.database.storage.allocated.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.database.storage.used": {
+        "metric_type": "gauge"
+    },
+    "oci.database.storage.used.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.database.storage.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.storage.utilization.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.database.transaction.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.database.user.calls": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.database.cluster.asmdiskgroup.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.filesystem.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.load.average": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.memory.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.node.status": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.ocpus.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.database.cluster.swap.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.guaranteed.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.guaranteed.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.guaranteed.vpus.per.gb": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.read.ops": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.blockstore.volume.read.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.replication.seconds.since.last.sync": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.replication.seconds.since.last.upload": {
+        "metric_type": "gauge"
+    },
+    "oci.blockstore.volume.throttled.ios": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.blockstore.volume.write.ops": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.blockstore.volume.write.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.gpu.infrastructure.health.gpu.ecc.double.bit.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.gpu.infrastructure.health.gpu.ecc.single.bit.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.gpu.infrastructure.health.gpu.memory.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.gpu.infrastructure.health.gpu.power.draw": {
+        "metric_type": "gauge"
+    },
+    "oci.gpu.infrastructure.health.gpu.temperature": {
+        "metric_type": "gauge"
+    },
+    "oci.gpu.infrastructure.health.gpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.computeagent.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.computeagent.disk.bytes.read": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.computeagent.disk.bytes.written": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.computeagent.disk.iops.read": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.computeagent.disk.iops.written": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.computeagent.load.average": {
+        "metric_type": "gauge"
+    },
+    "oci.computeagent.memory.allocation.stalls": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.computeagent.memory.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.computeagent.networks.bytes.in": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.computeagent.networks.bytes.out": {
+        "metric_type": "sum",
+        "aggregationTemporality": 2
+    },
+    "oci.rdma.infrastructure.health.rdma.rx.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.rdma.infrastructure.health.rdma.rx.packets": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.rdma.infrastructure.health.rdma.tx.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.rdma.infrastructure.health.rdma.tx.packets": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.compute.infrastructure.health.health.status": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.compute.infrastructure.health.instance.status": {
+        "metric_type": "gauge"
+    },
+    "oci.compute.infrastructure.health.maintenance.status": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.allocated.storage.utilization.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.apply.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.apply.lag.data.refresh.elapsed.time": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.avg.gc.cr.block.receive.time": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.backup.duration": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.backup.size": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.block.changes": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.blocking.sessions": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.cputime": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.current.logons": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.dbtime": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.estimated.failover.time": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.execute.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.fraspace.limit": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.frautilization": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.gc.cr.blocks.received": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.gc.current.blocks.received": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.io.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.interconnect.traffic": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.invalid.objects": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.logical.blocks.read": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.max.tablespace.size": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.memory.usage": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.monitoring.status": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.non.reclaimable.fra": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.ocpus.allocated": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.parse.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.parses.by.type": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.problematic.scheduled.dbmsjobs": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.process.limit.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.processes": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.reclaimable.fra": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.reclaimable.fraspace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.recovery.window": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.redo.apply.rate": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.redo.generation.rate": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.redo.size": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.session.limit.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.sessions": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.allocated.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.used": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.used.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.storage.utilization.by.tablespace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.transaction.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.transactions.by.status": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.transport.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.transport.lag.data.refresh.elapsed.time": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.unprotected.data.window": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.unusable.indexes": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.usable.fra": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.used.fraspace": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.user.calls": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oracle.oci.database.wait.time": {
+        "metric_type": "gauge"
+    },
+    "oci.oracle.oci.database.dbmgmt.job.executions.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.bits.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.bits.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.bytes.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.bytes.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.connection.state": {
+        "metric_type": "gauge"
+    },
+    "oci.fastconnect.ipv.4bgp.session.state": {
+        "metric_type": "gauge"
+    },
+    "oci.fastconnect.ipv.6bgp.session.state": {
+        "metric_type": "gauge"
+    },
+    "oci.fastconnect.packets.discarded": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.packets.error": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.packets.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.fastconnect.packets.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.file.system.read.average.latency.by.size": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.file.system.read.requests.by.size": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.file.system.read.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.file.system.usage": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.file.system.write.average.latency.by.size": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.file.system.write.requests.by.size": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.file.system.write.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.kerberos.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.ldap.connection.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.ldap.request.average.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.ldap.request.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.ldap.request.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.metadata.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.metadata.request.average.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.mount.target.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.mount.target.health": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.mount.target.read.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.mount.target.write.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.replication.egress.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.filestorage.replication.recovery.point.age": {
+        "metric_type": "gauge"
+    },
+    "oci.filestorage.replication.throughput": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.faas.allocated.provisioned.concurrency": {
+        "metric_type": "gauge"
+    },
+    "oci.faas.allocated.total.concurrency": {
+        "metric_type": "gauge"
+    },
+    "oci.faas.function.execution.duration": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.faas.function.invocation.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.faas.function.response.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.accepted.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.accepted.sslhandshake": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.active.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.active.sslconnections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.backend.servers": {
+        "metric_type": "gauge"
+    },
+    "oci.lbaas.backend.timeouts": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.bytes.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.bytes.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.closed.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.failed.sslclient.cert.verify": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.failed.sslhandshake": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.handled.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.200": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.2xx": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.3xx": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.4xx": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.502": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.504": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.http.responses.5xx": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.invalid.header.responses": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.keep.alive.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.lbaas.peak.bandwidth": {
+        "metric_type": "gauge"
+    },
+    "oci.lbaas.response.time.first.byte": {
+        "metric_type": "gauge"
+    },
+    "oci.lbaas.response.time.http.header": {
+        "metric_type": "gauge"
+    },
+    "oci.lbaas.unhealthy.backend.servers": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.active.connections": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.backup.failure": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.backup.size": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.backup.time": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.cpuutilization": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.channel.failure": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.channel.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.current.connections": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.db.volume.read.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.db.volume.read.operations": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.db.volume.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.db.volume.write.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.db.volume.write.operations": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.heat.wave.data.load.progress": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.heat.wave.health": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.heat.wave.statements": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.memory.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.memory.used": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.memory.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.network.receive.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.network.transmit.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.ocpus.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.ocpus.used": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.statement.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.statements": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.mysql.database.storage.allocated": {
+        "metric_type": "gauge"
+    },
+    "oci.mysql.database.storage.used": {
+        "metric_type": "gauge"
+    },
+    "oci.nat.gateway.bytes.from.natgw": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.bytes.to.natgw": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.connections.closed": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.connections.established": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.connections.timed.out": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.drops.to.natgw": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.packets.from.natgw": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.nat.gateway.packets.to.natgw": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.all.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.client.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.enabled.olm": {
+        "metric_type": "gauge"
+    },
+    "oci.objectstorage.first.byte.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.objectstorage.object.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.post.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.put.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.objectstorage.stored.bytes": {
+        "metric_type": "gauge"
+    },
+    "oci.objectstorage.total.request.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.objectstorage.uncommitted.parts": {
+        "metric_type": "gauge"
+    },
+    "oci.oke.apiserver.request.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oke.apiserver.response.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.oke.kubernetes.node.condition": {
+        "metric_type": "gauge"
+    },
+    "oci.oke.node.state": {
+        "metric_type": "gauge"
+    },
+    "oci.oke.unschedulable.pods": {
+        "metric_type": "gauge"
+    },
+    "oci.queue.consumer.lag": {
+        "metric_type": "gauge"
+    },
+    "oci.queue.messages.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.queue.messages.in.queue.count": {
+        "metric_type": "gauge"
+    },
+    "oci.queue.queue.size": {
+        "metric_type": "gauge"
+    },
+    "oci.queue.request.success": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.queue.requests.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.queue.requests.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.service.connector.hub.bytes.read.from.source": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.bytes.read.from.task": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.bytes.written.to.target": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.bytes.written.to.task": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.data.freshness": {
+        "metric_type": "gauge"
+    },
+    "oci.service.connector.hub.errors.at.source": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.errors.at.target": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.errors.at.task": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.latency.at.source": {
+        "metric_type": "gauge"
+    },
+    "oci.service.connector.hub.latency.at.target": {
+        "metric_type": "gauge"
+    },
+    "oci.service.connector.hub.latency.at.task": {
+        "metric_type": "gauge"
+    },
+    "oci.service.connector.hub.messages.read.from.source": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.messages.read.from.task": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.messages.written.to.target": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.messages.written.to.task": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.connector.hub.service.connector.hub.errors": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.bytes.from.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.bytes.to.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.packets.from.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.packets.to.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.sgw.drops.from.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.service.gateway.sgw.drops.to.service": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.smartnic.buffer.drops.from.host": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.smartnic.buffer.drops.from.network": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.conntrack.is.full": {
+        "metric_type": "gauge"
+    },
+    "oci.vcn.vnic.conntrack.util.percent": {
+        "metric_type": "gauge"
+    },
+    "oci.vcn.vnic.egress.drops.conntrack.full": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.egress.drops.security.list": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.egress.drops.throttle": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.from.network.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.from.network.packets": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.ingress.drops.conntrack.full": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.ingress.drops.security.list": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.ingress.drops.throttle": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.to.network.bytes": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vcn.vnic.to.network.packets": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.bytes.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.bytes.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.packets.error": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.packets.received": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.packets.sent": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.vpn.tunnel.state": {
+        "metric_type": "gauge"
+    },
+    "oci.waf.bandwidth": {
+        "metric_type": "gauge"
+    },
+    "oci.waf.number.of.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.waf.number.of.requests.detected": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.waf.traffic": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.buffer.cache.hit.ratio": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.connections": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.postgresql.cpu.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.deadlocks": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.postgresql.memory.utilization": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.read.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.read.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.read.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.used.storage": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.write.iops": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.write.latency": {
+        "metric_type": "gauge"
+    },
+    "oci.postgresql.write.throughput": {
+        "metric_type": "gauge"
+    },
+    "oci.network.firewall.byte.received.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.byte.sent.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.decryption.rule.hit.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.icmp.fragment.attacks.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.ip.spoof.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.land.attacks.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.mac.spoof.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.packet.drop.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.packet.received.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.packet.received.in.error.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.packet.sent.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.ping.of.death.attacks.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.security.rule.hit.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.network.firewall.teardrop.attacks.count": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    }
 }

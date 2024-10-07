@@ -1008,8 +1008,23 @@ for i, line in enumerate(lines):
 
             if match:
                 metric_type = match.group(1)
-                metrics_mapping[metric_name] = "sum" if metric_type == "count" else metric_type
+                if metric_type == "count":
+                    metrics_mapping[metric_name] = {
+                        "metric_type": "sum",
+                        "aggregationTemporality": 1
+                    }
 
-# Write metrics_mapping dictionary to JSON file
+                    with open('delta_counters.json', 'r') as f:
+                        delta_counters = json.load(f)
+
+                        for delta_counter in delta_counters:
+                            if delta_counter in metrics_mapping:
+                                metrics_mapping[delta_counter]["aggregationTemporality"] = 2
+                else:
+                    metrics_mapping[metric_name] = {
+                        "metric_type": "gauge"
+                    }
+
+# Write metrics_mapping dictionary to metrics_mapping.json
 with open('metrics_mapping.json', 'w') as f:
-    json.dump(metrics_mapping, f, indent=4)
+    json.dump(metrics_mapping, f, indent=4) 
