@@ -26,11 +26,27 @@
                                 "dataPoints": [
                                     {
                                         "asDouble": 33792,
-                                        "timeUnixNano": "1727913117088000000"
+                                        "timeUnixNano": "1727913117088000000",
+                                        "attributes": [
+                                            {
+                                              "key": "namespace",
+                                              "value": {
+                                                "stringValue": "ocid1.bootvolume.oc1.iad.abuwc"
+                                              }
+                                            }
+                                        ]
                                     },
                                     {
                                         "asDouble": 288768,
-                                        "timeUnixNano": "1727913147088000000"
+                                        "timeUnixNano": "1727913147088000000",
+                                        "attributes": [
+                                            {
+                                              "key": "namespace",
+                                              "value": {
+                                                "stringValue": "ocid1.bootvolume.oc1.iad.abuwc"
+                                              }
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -43,11 +59,27 @@
                                 "dataPoints": [
                                     {
                                         "asDouble": 5054,
-                                        "timeUnixNano": "1727913117088000000"
+                                        "timeUnixNano": "1727913117088000000",
+                                        "attributes": [
+                                            {
+                                              "key": "namespace",
+                                              "value": {
+                                                "stringValue": "ocid1.bootvolume.oc1.iad.abuwc"
+                                              }
+                                            }
+                                        ]
                                     },
                                     {
                                         "asDouble": 4878,
-                                        "timeUnixNano": "1727913147088000000"
+                                        "timeUnixNano": "1727913147088000000",
+                                        "attributes": [
+                                            {
+                                              "key": "namespace",
+                                              "value": {
+                                                "stringValue": "ocid1.bootvolume.oc1.iad.abuwc"
+                                              }
+                                            }
+                                        ]
                                     }
                                 ]
                             }

@@ -18,11 +18,11 @@ def camel_case_split(str):
 def get_metric_attributes(log_record: dict):
     dimensions = get_dictionary_value(dictionary=log_record, target_key='dimensions')
     namespace = get_dictionary_value(log_record, 'namespace')
-    region = os.environ.get('OCI_REGION')
-    result = []
+    region = os.environ.get("OCI_REGION")
 
+    result = []
     for key, value in dimensions.items():
-        attributes.append({
+        result.append({
             "key": key,
             "value": {"stringValue": str(value)}
         })
@@ -37,13 +37,13 @@ def get_metric_attributes(log_record: dict):
             "value": {"stringValue": str(region)}
     }
 
-    attributes.append(namespace_attr)
-    attributes.append(region_attr)
+    result.append(namespace_attr)
+    result.append(region_attr)
 
-    return attributes
+    return result
 
 
-def get_metric_points(log_record: dict, attributes):
+def get_metric_points(log_record: dict, attributes: tuple):
     result = []
 
     datapoints = get_dictionary_value(dictionary=log_record, target_key='datapoints')
@@ -54,7 +54,7 @@ def get_metric_points(log_record: dict, attributes):
         converted_datapoint = {
             'asDouble': datapoint.get('value'),
             'timeUnixNano': unix_timestamp_nano_str,
-            'attributes': metric_attributes
+            'attributes': attributes
         },
 
 
