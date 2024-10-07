@@ -114,7 +114,7 @@ def transform_metric_to_otlp_format(log_record: dict):
 
     metric_name = get_metric_name(log_record)
     metric_points = get_metric_points(log_record)
-    with open('../data/metric_types.json', 'r') as f:
+    with open('./data/metric_types.json', 'r') as f:
         metric_types = json.load(f)
     
     result = {
