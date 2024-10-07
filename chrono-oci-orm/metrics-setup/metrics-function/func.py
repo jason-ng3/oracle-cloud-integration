@@ -77,7 +77,7 @@ def _generate_metrics_msg(
                 {
                     "key": "service.instance.id",
                     "value": {
-                    "stringValue": tenancy_ocid
+                    "stringValue": source_fn_app_ocid
                     }
                 }
                 ]
