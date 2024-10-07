@@ -15,7 +15,35 @@ def camel_case_split(str):
     """Splits camel case string to individual strings"""
     return re.findall(r'[A-Z](?:[a-z]+|[A-Z]*(?=[A-Z]|$))', str)
 
-def get_metric_points(log_record: dict):
+def get_metric_attributes(log_record: dict):
+    dimensions = get_dictionary_value(dictionary=log_record, target_key='dimensions')
+    namespace = get_dictionary_value(log_record, 'namespace')
+    region = os.environ.get('OCI_REGION')
+    result = []
+
+    for key, value in dimensions.items():
+        attributes.append({
+            "key": key,
+            "value": {"stringValue": str(value)}
+        })
+    
+    namespace_attr = {
+            "key": "namespace",
+            "value": {"stringValue": str(namespace)}
+    }
+
+    region_attr = {
+            "key": "cloud_region",
+            "value": {"stringValue": str(region)}
+    }
+
+    attributes.append(namespace_attr)
+    attributes.append(region_attr)
+
+    return attributes
+
+
+def get_metric_points(log_record: dict, attributes):
     result = []
 
     datapoints = get_dictionary_value(dictionary=log_record, target_key='datapoints')
@@ -23,8 +51,12 @@ def get_metric_points(log_record: dict):
         # Calculate required TimeUnixNano
         unix_timestamp_nano_str = str(int(datapoint.get('timestamp')) * 1_000_000)
 
-        converted_datapoint = {'asDouble': datapoint.get('value'),
-                    'timeUnixNano': unix_timestamp_nano_str}
+        converted_datapoint = {
+            'asDouble': datapoint.get('value'),
+            'timeUnixNano': unix_timestamp_nano_str,
+            'attributes': metric_attributes
+        },
+
 
         result.append(converted_datapoint)
 

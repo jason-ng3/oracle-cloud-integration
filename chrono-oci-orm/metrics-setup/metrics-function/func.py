@@ -10,7 +10,7 @@ from fdk import context, response
 import requests
 from requests.adapters import HTTPAdapter
 from requests.exceptions import HTTPError
-from helpers import get_metric_name, get_metric_points, _should_compress_payload
+from helpers import get_metric_name,get_metric_attributes, get_metric_points, _should_compress_payload
 
 
 logger = logging.getLogger(__name__)
@@ -113,7 +113,8 @@ def transform_metric_to_otlp_format(log_record: dict):
     """
 
     metric_name = get_metric_name(log_record)
-    metric_points = get_metric_points(log_record)
+    metric_attributes = get_metric_attributes(log_record)
+    metric_points = get_metric_points(log_record, metric_attributes)
     with open('./data/metric_types.json', 'r') as f:
         metric_types = json.load(f)
     

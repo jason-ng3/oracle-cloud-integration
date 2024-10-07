@@ -5,7 +5,7 @@ resource "oci_functions_application" "metrics_function_app" {
     "CHRONO_COMPRESS" = "true"
     "OTEL_ENDPOINT"   = var.otel_collector_endpoint
     "CHRONO_MAX_POOL" = "20"
-    "TENANCY_OCID"    = var.tenancy_ocid
+    "OCI_REGION"      = var.region
   }
   defined_tags  = {}
   display_name  = "${var.resource_name_prefix}-function-app"
