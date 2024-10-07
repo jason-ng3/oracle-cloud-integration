@@ -140,17 +140,18 @@ def transform_metric_to_otlp_format(log_record: dict):
 
 def _send_metrics_msg_to_otel_collector(metrics_message: str) -> str:
     otel_endpoint = os.environ.get("OTEL_ENDPOINT")
+    api_headers = {"content-type": "application/json"}
 
-    # if _should_compress_payload():
-    #     serialized = gzip.compress(metrics_message.encode())
-    #     api_headers["content-encoding"] = "gzip"
-    # else:
-    #     serialized = metrics_message
+    if _should_compress_payload():
+        serialized = gzip.compress(metrics_message.encode())
+        api_headers["content-encoding"] = "gzip"
+    else:
+        serialized = metrics_message
 
     http_response = _session.post(
         otel_endpoint, 
-        data=metrics_message, 
-        headers={"content-type": "application/json"}
+        data=serialized, 
+        headers=api_headers
     )
 
     http_response.raise_for_status()
