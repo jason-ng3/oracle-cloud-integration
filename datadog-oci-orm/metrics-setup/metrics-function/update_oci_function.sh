@@ -26,6 +26,7 @@ sed -i '' "s|image_digest = \".*\"|image_digest = \"$image_digest\"|" $terraform
 echo "Updated Terrform file:"
 grep "image_digest = " $terraform_file
 
+cd ..
 git add .
 git commit -m "$commit_message"
 git push origin modify-oci-function
