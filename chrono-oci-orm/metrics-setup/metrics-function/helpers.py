@@ -55,7 +55,7 @@ def get_metric_points(log_record: dict, attributes: tuple):
             'asDouble': datapoint.get('value'),
             'timeUnixNano': unix_timestamp_nano_str,
             'attributes': attributes
-        },
+        }
 
 
         result.append(converted_datapoint)
