@@ -20,11 +20,11 @@ push_output=$(docker push iad.ocir.io/idf9gv5rieyl/chrono-metrics-functions/chro
 image_digest=$(echo "$push_output" | grep "digest: " | awk '{print $3}')
 echo "Image digest: $image_digest"
 
-terraform_file="../functions.tf"
-sed -i '' "s|image_digest = \".*\"|image_digest = \"$image_digest\"|" $terraform_file
+# terraform_file="../functions.tf"
+# sed -i '' "s|image_digest = \".*\"|image_digest = \"$image_digest\"|" $terraform_file
 
-echo "Updated Terrform file:"
-grep "image_digest = " $terraform_file
+# echo "Updated Terrform file:"
+# grep "image_digest = " $terraform_file
 
 cd ..
 git add .
