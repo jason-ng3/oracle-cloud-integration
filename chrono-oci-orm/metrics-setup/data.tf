@@ -22,7 +22,7 @@ data "oci_core_subnet" "input_subnet" {
 }
 
 data "oci_artifacts_container_image" "function_image" {
-  compartment_id = var.compartment_id
+  compartment_id = var.compartment_ocid
   repository     = "${local.oci_region_key}.ocir.io/${local.ocir_namespace}/${local.ocir_repo_name}"
   version        = "latest"
 }
