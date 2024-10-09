@@ -1,6 +1,5 @@
-## Deploy to OCI (metrics)
+## OCI Integration
+The OCI integration consists of two OCI resource manager (ORM) Terrform stacks:
 
-The setup creates an OCI resource manager (ORM) stack which uses terraform to:
-
-* Create OCI resources on OCI send metrics to Chronosphere using Connector Hub & OCI Functions
-* Create policies in order to allow Connector Hub to read metrics from different tenancy compartments
+1. A policy stack to create a dynamic group that contains the Connector Hub and the associated permissions policy to allow the dynamic group to read and invoke OCI functions.
+2. A metric stack to deploy the Connector Hub, OCI function application, and networking infrastructure (if necessary) for the metrics pipeline from OCI Monitoring to the OTel Collector.

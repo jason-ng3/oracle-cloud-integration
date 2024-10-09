@@ -1,0 +1,8 @@
+[
+    "oci.computeagent.disk.bytes.read",
+    "oci.computeagent.disk.bytes.written",
+    "oci.computeagent.disk.iops.read",
+    "oci.computeagent.disk.iops.written",
+    "oci.computeagent.networks.bytes.in",
+    "oci.computeagent.networks.bytes.out"
+]
