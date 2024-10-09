@@ -20,9 +20,3 @@ data "oci_core_subnet" "input_subnet" {
   #Required
   subnet_id = var.create_vcn ? module.vcn[0].subnet_id[local.subnet] : var.function_subnet_id
 }
-
-data "oci_artifacts_container_image" "function_image" {
-  compartment_id = var.compartment_ocid
-  repository     = "${local.oci_region_key}.ocir.io/${local.ocir_namespace}/${local.ocir_repo_name}"
-  version        = "latest"
-}
