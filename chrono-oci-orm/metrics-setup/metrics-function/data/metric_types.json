@@ -217,6 +217,13 @@
     "oci.gpu.infrastructure.health.gpu.utilization": {
         "metric_type": "gauge"
     },
+    "oci.compute.instance.metadata.requests": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.compute.instance.health.instance.accessibility.status": {
+        "metric_type": "gauge"
+    },
     "oci.computeagent.cpu.utilization": {
         "metric_type": "gauge"
     },
@@ -696,6 +703,17 @@
         "metric_type": "gauge"
     },
     "oci.lbaas.unhealthy.backend.servers": {
+        "metric_type": "gauge"
+    },
+    "oci.logging.bytes.ingested": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.logging.search.success": {
+        "metric_type": "sum",
+        "aggregationTemporality": 1
+    },
+    "oci.logging.custom.log.acceptance.rate": {
         "metric_type": "gauge"
     },
     "oci.mysql.database.active.connections": {
