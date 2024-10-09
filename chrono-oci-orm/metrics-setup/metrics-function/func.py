@@ -126,13 +126,13 @@ def transform_metric_to_otlp_format(log_record: dict):
         metric_type = metric_types[metric_name]["metric_type"]
         
         if metric_type == "cumulative_counter":
-            result[metric_type] = {
+            result["sum"] = {
                 "isMonotonic": True,
                 "aggregationTemporality": 2,
                 "dataPoints": metric_points
             }
         elif metric_type == "delta_counter":
-            result[metric_type] = {
+            result["sum"] = {
                 "isMonotonic": True,
                 "aggregationTemporality": 1,
                 "dataPoints": metric_points
