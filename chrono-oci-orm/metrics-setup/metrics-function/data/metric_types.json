@@ -12,8 +12,7 @@
         "metric_type": "gauge"
     },
     "oci.autonomous.database.current.logons": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.dbtime": {
         "metric_type": "gauge"
@@ -22,8 +21,7 @@
         "metric_type": "gauge"
     },
     "oci.autonomous.database.execute.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.iops": {
         "metric_type": "gauge"
@@ -38,27 +36,22 @@
         "metric_type": "gauge"
     },
     "oci.autonomous.database.parse.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.parses.by.type": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.queued.statements": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.redo.size": {
         "metric_type": "gauge"
     },
     "oci.autonomous.database.running.statements": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.sessions": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.storage.allocated": {
         "metric_type": "gauge"
@@ -79,19 +72,16 @@
         "metric_type": "gauge"
     },
     "oci.autonomous.database.transaction.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.transactions.by.status": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.transport.lag": {
         "metric_type": "gauge"
     },
     "oci.autonomous.database.user.calls": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.autonomous.database.wait.time": {
         "metric_type": "gauge"
@@ -103,16 +93,13 @@
         "metric_type": "gauge"
     },
     "oci.database.current.logons": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.database.execute.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.database.parse.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.database.storage.allocated": {
         "metric_type": "gauge"
@@ -133,12 +120,10 @@
         "metric_type": "gauge"
     },
     "oci.database.transaction.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.database.user.calls": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.database.cluster.asmdiskgroup.utilization": {
         "metric_type": "gauge"
@@ -174,8 +159,7 @@
         "metric_type": "gauge"
     },
     "oci.blockstore.volume.read.ops": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.blockstore.volume.read.throughput": {
         "metric_type": "gauge"
@@ -187,23 +171,19 @@
         "metric_type": "gauge"
     },
     "oci.blockstore.volume.throttled.ios": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.blockstore.volume.write.ops": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.blockstore.volume.write.throughput": {
         "metric_type": "gauge"
     },
     "oci.gpu.infrastructure.health.gpu.ecc.double.bit.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.gpu.infrastructure.health.gpu.ecc.single.bit.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.gpu.infrastructure.health.gpu.memory.utilization": {
         "metric_type": "gauge"
@@ -218,8 +198,7 @@
         "metric_type": "gauge"
     },
     "oci.compute.instance.metadata.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.compute.instance.health.instance.accessibility.status": {
         "metric_type": "gauge"
@@ -228,58 +207,46 @@
         "metric_type": "gauge"
     },
     "oci.computeagent.disk.bytes.read": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.computeagent.disk.bytes.written": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.computeagent.disk.iops.read": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.computeagent.disk.iops.written": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.computeagent.load.average": {
         "metric_type": "gauge"
     },
     "oci.computeagent.memory.allocation.stalls": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.computeagent.memory.utilization": {
         "metric_type": "gauge"
     },
     "oci.computeagent.networks.bytes.in": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.computeagent.networks.bytes.out": {
-        "metric_type": "sum",
-        "aggregationTemporality": 2
+        "metric_type": "cumulative_counter"
     },
     "oci.rdma.infrastructure.health.rdma.rx.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.rdma.infrastructure.health.rdma.rx.packets": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.rdma.infrastructure.health.rdma.tx.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.rdma.infrastructure.health.rdma.tx.packets": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.compute.infrastructure.health.health.status": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.compute.infrastructure.health.instance.status": {
         "metric_type": "gauge"
@@ -318,8 +285,7 @@
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.current.logons": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oracle.oci.database.dbtime": {
         "metric_type": "gauge"
@@ -328,8 +294,7 @@
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.execute.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oracle.oci.database.fraspace.limit": {
         "metric_type": "gauge"
@@ -374,8 +339,7 @@
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.parse.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oracle.oci.database.parses.by.type": {
         "metric_type": "gauge"
@@ -432,8 +396,7 @@
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.transaction.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oracle.oci.database.transactions.by.status": {
         "metric_type": "gauge"
@@ -457,31 +420,25 @@
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.user.calls": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oracle.oci.database.wait.time": {
         "metric_type": "gauge"
     },
     "oci.oracle.oci.database.dbmgmt.job.executions.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.bits.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.bits.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.bytes.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.bytes.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.connection.state": {
         "metric_type": "gauge"
@@ -493,20 +450,16 @@
         "metric_type": "gauge"
     },
     "oci.fastconnect.packets.discarded": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.packets.error": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.packets.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.fastconnect.packets.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.file.system.read.average.latency.by.size": {
         "metric_type": "gauge"
@@ -530,23 +483,19 @@
         "metric_type": "gauge"
     },
     "oci.filestorage.kerberos.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.ldap.connection.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.ldap.request.average.latency": {
         "metric_type": "gauge"
     },
     "oci.filestorage.ldap.request.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.ldap.request.throughput": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.metadata.iops": {
         "metric_type": "gauge"
@@ -555,30 +504,25 @@
         "metric_type": "gauge"
     },
     "oci.filestorage.mount.target.connections": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.mount.target.health": {
         "metric_type": "gauge"
     },
     "oci.filestorage.mount.target.read.throughput": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.mount.target.write.throughput": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.replication.egress.throughput": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.filestorage.replication.recovery.point.age": {
         "metric_type": "gauge"
     },
     "oci.filestorage.replication.throughput": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.faas.allocated.provisioned.concurrency": {
         "metric_type": "gauge"
@@ -587,24 +531,19 @@
         "metric_type": "gauge"
     },
     "oci.faas.function.execution.duration": {
-        "metric_type": "gauge",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.faas.function.invocation.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.faas.function.response.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.accepted.connections": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.accepted.sslhandshake": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.active.connections": {
         "metric_type": "gauge"
@@ -616,72 +555,55 @@
         "metric_type": "gauge"
     },
     "oci.lbaas.backend.timeouts": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.bytes.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.bytes.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.closed.connections": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.failed.sslclient.cert.verify": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.failed.sslhandshake": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.handled.connections": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.200": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.2xx": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.3xx": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.4xx": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.502": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.504": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.http.responses.5xx": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.invalid.header.responses": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.lbaas.keep.alive.connections": {
         "metric_type": "gauge"
@@ -699,12 +621,10 @@
         "metric_type": "gauge"
     },
     "oci.logging.bytes.ingested": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.logging.search.success": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.logging.custom.log.acceptance.rate": {
         "metric_type": "gauge"
@@ -734,23 +654,19 @@
         "metric_type": "gauge"
     },
     "oci.mysql.database.db.volume.read.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.db.volume.read.operations": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.db.volume.utilization": {
         "metric_type": "gauge"
     },
     "oci.mysql.database.db.volume.write.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.db.volume.write.operations": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.heat.wave.data.load.progress": {
         "metric_type": "gauge"
@@ -759,8 +675,7 @@
         "metric_type": "gauge"
     },
     "oci.mysql.database.heat.wave.statements": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.memory.allocated": {
         "metric_type": "gauge"
@@ -772,12 +687,10 @@
         "metric_type": "gauge"
     },
     "oci.mysql.database.network.receive.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.network.transmit.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.ocpus.allocated": {
         "metric_type": "gauge"
@@ -789,8 +702,7 @@
         "metric_type": "gauge"
     },
     "oci.mysql.database.statements": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.mysql.database.storage.allocated": {
         "metric_type": "gauge"
@@ -799,44 +711,34 @@
         "metric_type": "gauge"
     },
     "oci.nat.gateway.bytes.from.natgw": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.bytes.to.natgw": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.connections.closed": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.connections.established": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.connections.timed.out": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.drops.to.natgw": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.packets.from.natgw": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.nat.gateway.packets.to.natgw": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.objectstorage.all.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.objectstorage.client.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.objectstorage.enabled.olm": {
         "metric_type": "gauge"
@@ -848,12 +750,10 @@
         "metric_type": "gauge"
     },
     "oci.objectstorage.post.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.objectstorage.put.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.objectstorage.stored.bytes": {
         "metric_type": "gauge"
@@ -865,12 +765,10 @@
         "metric_type": "gauge"
     },
     "oci.oke.apiserver.request.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oke.apiserver.response.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.oke.kubernetes.node.condition": {
         "metric_type": "gauge"
@@ -885,8 +783,7 @@
         "metric_type": "gauge"
     },
     "oci.queue.messages.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.queue.messages.in.queue.count": {
         "metric_type": "gauge"
@@ -895,8 +792,7 @@
         "metric_type": "gauge"
     },
     "oci.queue.request.success": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.queue.requests.latency": {
         "metric_type": "gauge"
@@ -905,35 +801,28 @@
         "metric_type": "gauge"
     },
     "oci.service.connector.hub.bytes.read.from.source": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.bytes.read.from.task": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.bytes.written.to.target": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.bytes.written.to.task": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.data.freshness": {
         "metric_type": "gauge"
     },
     "oci.service.connector.hub.errors.at.source": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.errors.at.target": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.errors.at.task": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.latency.at.source": {
         "metric_type": "gauge"
@@ -945,56 +834,43 @@
         "metric_type": "gauge"
     },
     "oci.service.connector.hub.messages.read.from.source": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.messages.read.from.task": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.messages.written.to.target": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.messages.written.to.task": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.connector.hub.service.connector.hub.errors": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.bytes.from.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.bytes.to.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.packets.from.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.packets.to.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.sgw.drops.from.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.service.gateway.sgw.drops.to.service": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.smartnic.buffer.drops.from.host": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.smartnic.buffer.drops.from.network": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.conntrack.is.full": {
         "metric_type": "gauge"
@@ -1003,64 +879,49 @@
         "metric_type": "gauge"
     },
     "oci.vcn.vnic.egress.drops.conntrack.full": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.egress.drops.security.list": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.egress.drops.throttle": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.from.network.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.from.network.packets": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.ingress.drops.conntrack.full": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.ingress.drops.security.list": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.ingress.drops.throttle": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.to.network.bytes": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vcn.vnic.to.network.packets": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.bytes.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.bytes.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.packets.error": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.packets.received": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.packets.sent": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.vpn.tunnel.state": {
         "metric_type": "gauge"
@@ -1069,12 +930,10 @@
         "metric_type": "gauge"
     },
     "oci.waf.number.of.requests": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.waf.number.of.requests.detected": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.waf.traffic": {
         "metric_type": "gauge"
@@ -1083,15 +942,13 @@
         "metric_type": "gauge"
     },
     "oci.postgresql.connections": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.postgresql.cpu.utilization": {
         "metric_type": "gauge"
     },
     "oci.postgresql.deadlocks": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.postgresql.memory.utilization": {
         "metric_type": "gauge"
@@ -1118,59 +975,45 @@
         "metric_type": "gauge"
     },
     "oci.network.firewall.byte.received.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.byte.sent.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.decryption.rule.hit.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.icmp.fragment.attacks.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.ip.spoof.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.land.attacks.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.mac.spoof.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.packet.drop.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.packet.received.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.packet.received.in.error.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.packet.sent.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.ping.of.death.attacks.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.security.rule.hit.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     },
     "oci.network.firewall.teardrop.attacks.count": {
-        "metric_type": "sum",
-        "aggregationTemporality": 1
+        "metric_type": "delta_counter"
     }
 }
