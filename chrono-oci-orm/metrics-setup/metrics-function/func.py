@@ -15,9 +15,6 @@ from helpers import get_metric_name,get_metric_attributes, get_metric_points, _s
 
 logger = logging.getLogger(__name__)
 
-
-OUTPUT_MESSAGE_VERSION = "v1.0"
-
 _max_pool = int(os.environ.get("CHRONO_MAX_POOL", 10))
 _session = requests.Session()
 _session.mount("https://", HTTPAdapter(pool_connections=_max_pool))
