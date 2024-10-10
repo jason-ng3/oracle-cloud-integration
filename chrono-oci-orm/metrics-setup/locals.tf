@@ -39,4 +39,5 @@ locals {
   docker_image_path     = "${local.oci_docker_repository}/${local.ocir_repo_name}/${local.function_name}:latest"
   custom_image_path     = var.function_image_path
   user_image_provided   = length(var.function_image_path) > 0 ? true : false
+  image_exists          = length(data.oci_artifacts_container_images.images.container_image_collection[0].items) > 0
 }

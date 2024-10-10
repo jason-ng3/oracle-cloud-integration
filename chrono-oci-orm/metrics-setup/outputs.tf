@@ -42,3 +42,7 @@ output "connector_hub" {
   description = "Connector hub created for forwarding the data to the function"
   value       = oci_sch_service_connector.metrics_service_connector.id
 }
+
+output "container_image_collection" {
+  value = data.oci_artifacts_container_images.images.container_image_collection[0].items
+}

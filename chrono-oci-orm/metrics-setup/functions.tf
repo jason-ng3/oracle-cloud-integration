@@ -29,4 +29,5 @@ resource "oci_functions_function" "metrics_function" {
   defined_tags  = {}
   freeform_tags = local.freeform_tags
   image         = local.user_image_provided ? local.custom_image_path : local.docker_image_path
+  image_digest  = local.image_exists ? data.oci_artifacts_container_images.images.container_image_collection[0].items[0].digest : null
 }
